@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this research prototype, please cite the associated EUREKA! ITB 2026 project report and acknowledge the authors."
+title: "TESS Exoplanet Transit Candidate Pipeline"
+authors:
+  - family-names: Ruslim
+    given-names: Giselle
+  - family-names: Aurelia
+    given-names: Michelle Callysta
+  - family-names: Petrus
+    given-names: Perry Quinlan
+type: software
