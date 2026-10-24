@@ -1,0 +1,2 @@
+# Only needed to (re)download the light curve with fetch_data.py
+lightkurve>=2.4
