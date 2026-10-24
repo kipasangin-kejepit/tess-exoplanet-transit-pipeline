@@ -31,15 +31,20 @@ A research prototype for preprocessing TESS light curves, searching for periodic
 > * "Unreported" candidates: the only target analysed is WASP-18, a well-known planet host. **No search for unreported candidates was performed**, and no catalogue cross-match was done.
 > * The report's remark that results "show the potential" of the pipeline should be read as: v0.1 did **not** correctly recover the known planet's period, depth or duration. v0.2 is the first version intended to.
 >
-> ### Corrected re-run (to be completed)
-> Run the command in *Reproduce the WASP-18 check* below and paste the output here. Reference values are approximate and must be checked against the NASA Exoplanet Archive before they are cited.
+> ### Corrected re-run (v0.2.0, 24 Oct 2026)
+> Same input file as the report (`data/tess_real_lightcurve.csv`, 18,299 rows), run with `--known-period 0.9414526`. Environment: Python 3.14, numpy 2.5.4, pandas 2.3.3, astropy 8.0.2. Reference values are approximate and should be checked against the NASA Exoplanet Archive before they are cited.
 >
 > | Quantity | v0.1 (report) | v0.2 re-run | Published (verify) |
 > |---|---|---|---|
-> | Period (d) | 0.943270 | _fill in_ | ≈ 0.9415 |
-> | Duration (h) | 4.80 (grid edge) | _fill in_ | ≈ 2.2 |
-> | Depth (%) | 0.0367 | _fill in_ | ≈ 1 |
-> | Independent candidates | 5 (claimed) | _fill in_ | 1 known planet |
+> | Period (d) | 0.943270 | 0.941402 (−0.005 % vs 0.941453) | ≈ 0.9415 |
+> | Duration (h) | 4.80 (grid edge) | 2.06 (0.086 d, a grid value) | ≈ 2.2 |
+> | Depth (%) | 0.0367 | 0.953 | ≈ 1 |
+> | BLS SNR | 0.000318 (unscaled "power") | 567.7 (SDE 24.6) | n/a |
+> | Points removed by clipping | 1,501 | 0 | n/a |
+> | Independent candidates | 5 (claimed) | 1 | 1 known planet |
+>
+> The other 9 candidates (periods 1.88, 2.82, 3.77, 4.71, 1.41, 5.65, 6.59, 7.53 and 8.47 d) are flagged as period ratios 2/1, 3/1, 4/1, 5/1, 3/2, 6/1, 7/1, 8/1 and 9/1 of the recovered period, so they are not independent signals.
+> Remaining caveats: the duration comes from a coarse geometric grid (14 values), so it is only good to roughly 10 %; and the injection–recovery test (`--injection-recovery`) has not yet been run with real astropy, so no detection-efficiency number is claimed.
 
 ## What it does
 
