@@ -1,3 +1,0 @@
-LICENSE STATUS: NOT YET SELECTED
-
-Before public release, the project team should agree on a software license. A public GitHub repository without a license does not automatically grant others permission to reuse, modify, or redistribute the code. If all team members agree to use the MIT License, replace this file with the standard MIT License text and confirm the copyright notice.
